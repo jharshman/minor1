@@ -39,13 +39,13 @@ istream &operator>>(istream &in, Complex &c) {
 Complex operator+(const Complex &left, const Complex &right) {
         Complex temp;
         temp.setReal(left.getReal() + right.getReal());
-        temp.setImag(left.getImag() - right.getImag());
+        temp.setImag(left.getImag() + right.getImag());
         return temp;
 }
 Complex operator-(const Complex &left, const Complex &right) {
         Complex temp;
-        temp.setReal(left.getReal() + right.getReal());
-        temp.setImag(left.getImag() + right.getImag());
+        temp.setReal(left.getReal() - right.getReal());
+        temp.setImag(left.getImag() - right.getImag());
         return temp;
 }
 

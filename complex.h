@@ -3,7 +3,8 @@
  * Josh Harshman
  * 07/07/15
  **/
-
+#ifndef __COMPLEX_H__
+#define __COMPLEX_H__
 #include <iostream>
 using namespace std;
 
@@ -14,7 +15,7 @@ class Complex {
                 int real, imag;
         public:
                 Complex(int r=0, int i=0);
-                ~Complex();
+                ~Complex() {cout << "cleaning up" << endl;};
                 Complex(const Complex &orig);
 
                 int getReal() const { return real; }
@@ -32,4 +33,4 @@ class Complex {
                 Complex operator*(const Complex &left, const Complex &right);
                 ostream &operator<<(ostream &out, const Complex &c);
                 istream &operator>>(istream &in, Complex &c);
-
+#endif
