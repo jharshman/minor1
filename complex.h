@@ -13,7 +13,7 @@ class Complex {
         private:
                 int real, imag;
         public:
-                Complex(int r, int i);
+                Complex(int r=0, int i=0);
                 ~Complex();
                 Complex(const Complex &orig);
 
