@@ -17,8 +17,8 @@ class Complex {
                 ~Complex();
                 Complex(const Complex &orig);
 
-                int getReal() { return real; }
-                int getImag() { return imag; }
+                int getReal() const { return real; }
+                int getImag() const { return imag; }
 
                 void setReal(int r);
                 void setImag(int i);
@@ -31,5 +31,5 @@ class Complex {
                 Complex operator-(const Complex &left, const Complex &right);
                 Complex operator*(const Complex &left, const Complex &right);
                 ostream &operator<<(ostream &out, const Complex &c);
-                istream &operator>>(istream &in, const Complex &c);
+                istream &operator>>(istream &in, Complex &c);
 

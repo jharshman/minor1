@@ -3,6 +3,7 @@
  * Josh Harshman
  * 07/07/15
  * */
+
 #include "complex.h"
 
 Complex::Complex(int r, int i) {
@@ -24,23 +25,33 @@ void Complex::setImag(int i) {
 }
 
 ostream &operator<<(ostream &out, const Complex &c) {
-        out << c.getReal() << " " << c.getImag();
+        out << c.getReal() << "+" << c.getImag() << "i" << endl;
         return out;
 }
 
-istream &operator>>(istream &in, const Complex &c) {
-        in >> c.real >> c.imag;
+istream &operator>>(istream &in, Complex &c) {
+        int r, i;
+        in >> r >> i;
+        c.setReal(r);
+        c.setImag(i);
         return in;
 }
-
-Complex &operator+(const Complex &left, const Complex &right) {
-
+Complex operator+(const Complex &left, const Complex &right) {
+        Complex temp;
+        temp.setReal(left.getReal() + right.getReal());
+        temp.setImag(left.getImag() - right.getImag());
+        return temp;
+}
+Complex operator-(const Complex &left, const Complex &right) {
+        Complex temp;
+        temp.setReal(left.getReal() + right.getReal());
+        temp.setImag(left.getImag() + right.getImag());
+        return temp;
 }
 
-Complex &operator-(const Complex &left, const Complex &right) {
-
-}
-
-Complex &operator*(const Complex &left, const Complex &right) {
-
+Complex operator*(const Complex &left, const Complex &right) {
+        Complex temp;
+        temp.setReal( ((left.getReal())*(right.getReal()))-((left.getImag())*(right.getImag())) );
+        temp.setImag( ((left.getReal())*(right.getImag()))+((right.getReal())*(left.getImag())) );
+        return temp;
 }
