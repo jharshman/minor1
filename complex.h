@@ -15,7 +15,7 @@ class Complex {
                 int real, imag;
         public:
                 Complex(int r=0, int i=0);
-                ~Complex() {cout << "cleaning up" << endl;};
+                ~Complex() {};
                 Complex(const Complex &orig);
 
                 int getReal() const { return real; }

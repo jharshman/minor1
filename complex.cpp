@@ -25,7 +25,7 @@ void Complex::setImag(int i) {
 }
 
 ostream &operator<<(ostream &out, const Complex &c) {
-        out << c.getReal() << "+" << c.getImag() << "i" << endl;
+        out << c.getReal() << "+" << c.getImag() << "i";
         return out;
 }
 
