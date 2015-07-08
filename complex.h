@@ -33,4 +33,6 @@ class Complex {
                 Complex operator*(const Complex &left, const Complex &right);
                 ostream &operator<<(ostream &out, const Complex &c);
                 istream &operator>>(istream &in, Complex &c);
+                void displaymenu();
+                void selectionhandler(int &choice);
 #endif

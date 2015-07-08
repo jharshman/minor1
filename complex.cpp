@@ -55,3 +55,4 @@ Complex operator*(const Complex &left, const Complex &right) {
         temp.setImag( ((left.getReal())*(right.getImag()))+((right.getReal())*(left.getImag())) );
         return temp;
 }
+
