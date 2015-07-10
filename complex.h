@@ -2,6 +2,9 @@
  * complex.h
  * Josh Harshman
  * 07/07/15
+ *
+ * Compiled using g++ (GCC) version 5.1.0
+ *
  **/
 #ifndef __COMPLEX_H__
 #define __COMPLEX_H__
